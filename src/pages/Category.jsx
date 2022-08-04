@@ -92,8 +92,6 @@ function Category() {
       } catch (e) {
         toast.error('Could not fetch listings')
       }
-
-
   }
 
   return (
