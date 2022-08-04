@@ -4,7 +4,7 @@ import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg'
 import bedIcon from '../assets/svg/bedIcon.svg'
 import bathtubIcon from '../assets/svg/bathtubIcon.svg'
 
-function ListingItem({ listing, id }) {
+function ListingItem({ listing, id, onDelete }) {
     return (
         <li className='categoryListing'>
           <Link
@@ -48,13 +48,13 @@ function ListingItem({ listing, id }) {
             </div>
           </Link>
     
-          {/*onDelete && (
+          {onDelete && (
             <DeleteIcon
               className='removeIcon'
-              fill='rgb(231, 76,60)'
+              fill='rgb(0, 0, 0)'
               onClick={() => onDelete(listing.id, listing.name)}
             />
-          )*/}
+          )}
     
           {/* onEdit && <EditIcon className='editIcon' onClick={() => onEdit(id)} />*/}
         </li>
