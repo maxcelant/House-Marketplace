@@ -89,6 +89,9 @@ export default function Profile() {
     }
   }
 
+  const onEdit = (id) => {
+    navigate(`/edit-listing/${id}`)
+  }
 
   return (
     <div className="profile">
@@ -121,7 +124,7 @@ export default function Profile() {
             <p className="listingText">Your Listings</p>
             <ul className='listingsList'>
               {listings.map((listing) => (
-                <ListingItem key={listing.id} listing={listing.data} id={listing.id} onDelete={() => onDelete(listing.id)}/>
+                <ListingItem key={listing.id} listing={listing.data} id={listing.id} onDelete={() => onDelete(listing.id)} onEdit={() => onEdit(listing.id)}/>
               ))}
             </ul>
           </Fragment>
